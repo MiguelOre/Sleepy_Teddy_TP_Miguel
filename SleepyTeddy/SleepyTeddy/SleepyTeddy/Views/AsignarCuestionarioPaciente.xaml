@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SleepyTeddy.Views.AsignarCuestionarioPaciente">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Label Text="Terapeuta" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0"  />
+            <Picker Title="Seleccionar cuestionario"
+                    ItemsSource="{Binding Cuestionarios}"
+                    SelectedItem="{Binding SelectedColorName, Mode=TwoWay}"
+                    ItemDisplayBinding="{Binding}"
+                    x:Name="lista_cuestionarios"
+                    Grid.Row="0"
+                    Grid.Column="1"  />
+            <Picker Title="Seleccionar paciente"
+                    ItemsSource="{Binding ListPatient}"
+                    SelectedItem="{Binding SelectedColorName, Mode=TwoWay}"
+                    ItemDisplayBinding="{Binding Name}"
+                    x:Name="lista_pacientes"
+                    Grid.Row="0"
+                    Grid.Column="1"  />
+
+            <Button Grid.Row="8"
+                    Grid.Column="0"
+                    Margin="5"
+                    x:Name="btnAceptar"
+                    Text="Asignar"
+                    TextColor="White"
+                    BackgroundColor="#2c3e50"
+                    WidthRequest="150"
+                    HorizontalOptions="Center"
+                    CornerRadius="10"
+                    Clicked="btnAceptar_clicked" />
+        </StackLayout>      
+    </ContentPage.Content>
+</ContentPage>

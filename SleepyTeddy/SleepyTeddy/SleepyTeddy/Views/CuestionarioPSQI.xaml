@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SleepyTeddy.Views.CuestionarioPSQI"
+             Title="Cuestionario PSQI">
+    <ScrollView>
+        <StackLayout Margin="20">
+
+            <Label Text="INSTRUCCIONES: Las siguientes cuestiones hacen referencia a tus hábitos de sueño sólo durante el último mes. Tus respuestas deben reflejar fielmente lo ocurrido la mayoría de días y noches del último mes. Por favor contesta a todas las preguntas." FontSize="20" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" Margin="0, 15" />
+
+            <Label Text="1. Durante el último mes, ¿a qué hora solías acostarte por la noche?" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Label Text="HORA HABITUAL DE ACOSTARSE:" FontSize="15" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Entry Grid.Row="0"
+                   Grid.Column="0"
+                   x:Name="respuesta_uno"
+                   Placeholder=""
+                   WidthRequest="100"
+                   VerticalOptions="Center"/>
+
+            <Label Text="2. Durante el último mes, ¿cuánto tiempo (en minutos) te ha costado quedarte dormido después de acostarte por las noches?" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Label Text="NÚMERO DE MINUTOS PARA CONCILIAR EL SUEÑO:" FontSize="15" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Entry Grid.Row="0"
+                   Grid.Column="0"
+                   x:Name="respuesta_dos"
+                   Placeholder=""
+                   WidthRequest="100"
+                   VerticalOptions="Center"/>
+
+            <Label Text="3. Durante el último mes, ¿a qué hora te has levantado habitualmente por la mañana?" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Label Text="HORA HABITUAL DE LEVANTARSE:" FontSize="15" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Entry Grid.Row="0"
+                   Grid.Column="0"
+                   x:Name="respuesta_tres"
+                   Placeholder=""
+                   WidthRequest="100"
+                   VerticalOptions="Center"/>
+
+            <Label Text="4. Durante el último mes, ¿cuántas horas de sueño real has mantenido por las noches? (puede ser diferente del número de horas que estuviste acostado)" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Label Text="HORAS DE SUEÑO POR NOCHE:" FontSize="15" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Entry Grid.Row="0"
+                   Grid.Column="0"
+                   x:Name="respuesta_cuatro"
+                   Placeholder=""
+                   WidthRequest="100"
+                   VerticalOptions="Center"/>
+
+            <Label Text="Para cada una de las cuestiones siguientes, selecciona la respuesta más adecuada a tu situación. " FontSize="20" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" Margin="0, 15" />
+
+            <Label Text="5.Durante el último mes, ¿con qué frecuencia has tenido sueño alterado a consecuencia de...?" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+
+            <Label Text="(a) no poder conciliar el sueño después de 30 minutos de intentarlo:" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerOne" SelectedIndexChanged="PickerOne_OnSelectedIndexChangue" />
+
+            <Label Text="(b) despertarse en mitad de la noche o madrugada:" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerTwo" SelectedIndexChanged="PickerTwo_OnSelectedIndexChangue" />
+
+            <Label Text="(c) tener que ir al baño:" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerThree" SelectedIndexChanged="PickerThree_OnSelectedIndexChangue" />
+
+            <Label Text="(d) no poder respirar adecuadamente:" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerFour" SelectedIndexChanged="PickerFour_OnSelectedIndexChangue" />
+
+            <Label Text="(e) tos o ronquidos:" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerFive" SelectedIndexChanged="PickerFive_OnSelectedIndexChangue" />
+
+            <Label Text="(f) sensación de frío:" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerSix" SelectedIndexChanged="PickerSix_OnSelectedIndexChangue" />
+
+            <Label Text="(g) sensación de calor:" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerSeven" SelectedIndexChanged="PickerSeven_OnSelectedIndexChangue" />
+
+            <Label Text="(h) pesadillas:" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerEight" SelectedIndexChanged="PickerEight_OnSelectedIndexChangue" />
+
+            <Label Text="(i) sentir dolor:" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerNine" SelectedIndexChanged="PickerNine_OnSelectedIndexChangue" />
+
+            <Label Text="(j) otra causa(s):" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Entry Grid.Row="0"
+                   Grid.Column="0"
+                   x:Name="respuesta_block"
+                   Placeholder=""
+                   WidthRequest="100"
+                   VerticalOptions="Center"
+                   IsEnabled="False"/>
+
+            <Label Text="¿Con qué frecuencia ha tenido un sueño alterado a consecuencia de este problema?" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerTen" SelectedIndexChanged="PickerTen_OnSelectedIndexChangue" />
+
+            <Label Text="6. Durante el último mes, ¿cómo calificarías, en general, la calidad de tu sueño?" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerEleven" SelectedIndexChanged="PickerEleven_OnSelectedIndexChangue" />
+
+            <Label Text="7. Durante el último mes, ¿con qué frecuencia tuviste que tomar medicinas (prescritas o automedicadas) para poder dormir?" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerTwelve" SelectedIndexChanged="PickerTwelve_OnSelectedIndexChangue" />
+
+            <Label Text="8. Durante el último mes, ¿con qué frecuencia tuviste dificultad para mantenerte despierto mientras conducías, comías o desarrollabas alguna actividad social?" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerThirteen" SelectedIndexChanged="PickerThirteen_OnSelectedIndexChangue" />
+
+            <Label Text="9. Durante el último mes, ¿cómo de problemático ha resultado para ti el mantener el entusiasmo por hacer las cosas?" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerFourteen" SelectedIndexChanged="PickerFourteen_OnSelectedIndexChangue" />
+
+            <Button Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="5"
+                    x:Name="btnAceptar"
+                    Text="Aceptar"
+                    TextColor="White"
+                    BackgroundColor="#2c3e50"
+                    WidthRequest="150"
+                    HorizontalOptions="Center"
+                    CornerRadius="10"
+                    Clicked="btnAceptar_clicked"/>
+
+
+            <Button Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="5"
+                    x:Name="btnCancelar"
+                    Text="Cancelar"
+                    TextColor="White"
+                    BackgroundColor="#2c3e50"
+                    WidthRequest="150"
+                    HorizontalOptions="Center"
+                    CornerRadius="10"
+                    Clicked="btnCancelar_clicked" />
+            
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

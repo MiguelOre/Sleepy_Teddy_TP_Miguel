@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SleepyTeddy.Views.BuscarPaciente">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Margin="15" HorizontalOptions="Center" VerticalOptions="Center" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Entry Grid.Row="1"
+                   Grid.Column="0"
+                   Margin="5"
+                   x:Name="nmApellidos"
+                   Placeholder="Apellidos del paciente"
+                   WidthRequest="250"
+                   HorizontalOptions="Center"/>
+
+                <Button Grid.Row="2"
+                    Grid.Column="0"
+                    Margin="5"
+                    x:Name="btnBuscarPaciente"
+                    Text="Buscar"
+                    TextColor="White"
+                    BackgroundColor="#2c3e50"
+                    WidthRequest="150"
+                    HorizontalOptions="Center"
+                    CornerRadius="10"
+                    Clicked="btnBuscar_clicked" />
+
+                <ListView Grid.Row="3" Grid.Column="0"
+                    Margin="5" HeightRequest="300" x:Name="MyListView"
+            ItemsSource="{Binding Items}"
+            ItemTapped="Handle_ItemTapped"
+            CachingStrategy="RecycleElement">
+                    <!--Built in Cells-->
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding .}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                    <!--Custom View Cells-->
+                    <!--
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout>
+            <Label Text="{Binding Text}" 
+                   Style="{DynamicResource ListItemTextStyle}" />
+            <Label Text="{Binding Detail}" 
+                   Style="{DynamicResource ListItemDetailTextStyle}"/>
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+    -->
+                </ListView>
+                <Button Grid.Row="4"
+                    Grid.Column="0"
+                    Margin="5"
+                    x:Name="btnRegistrarPaciente"
+                    Text="Crear Paciente"
+                    TextColor="White"
+                    BackgroundColor="#2c3e50"
+                    WidthRequest="150"
+                    HorizontalOptions="Center"
+                    CornerRadius="10"
+                    Clicked="btnRegistrarPaciente_clicked" />
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

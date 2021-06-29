@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SleepyTeddy.Views.CuestionarioISI"
+             Title="Cuestionario ISI">
+    <ScrollView>
+        <StackLayout Margin="20">
+
+
+            <Label Text="1. Indica la gravedad de tu actual problema(s) de sueño:" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" Margin="0, 15" />
+
+            <Label Text="Dificultad para quedarse dormido/a:" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerOne" SelectedIndexChanged="PickerOne_OnSelectedIndexChangue" />
+
+            <Label Text="Dificultad para permanecer dormido/a:" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerTwo" SelectedIndexChanged="PickerTwo_OnSelectedIndexChangue" />
+
+            <Label Text="Despertarse muy temprano:" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerThree" SelectedIndexChanged="PickerThree_OnSelectedIndexChangue" />
+
+
+            <Label Text="2. ¿Cómo estás de satisfecho/a en la actualidad con tu sueño?" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerFour" SelectedIndexChanged="PickerFour_OnSelectedIndexChangue" />
+
+            <Label Text="3. ¿En qué medida consideras que tu problema de sueño interfiere con tu funcionamiento diario (Ej.: fatiga durante el día, capacidad para las tareas cotidianas/trabajo, concentración, memoria, estado de ánimo, etc.)?" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerFive" SelectedIndexChanged="PickerFive_OnSelectedIndexChangue" />
+
+            <Label Text="4. ¿En qué medida crees que los demás se dan cuenta de tu problema de sueño por lo que afecta a tu calidad de vida?" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerSix" SelectedIndexChanged="PickerSix_OnSelectedIndexChangue" />
+
+            <Label Text="5. ¿Cómo estás de preocupado/a por tu actual problema de sueño?" FontSize="15" FontAttributes="Bold" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="PickerSeven" SelectedIndexChanged="PickerSeven_OnSelectedIndexChangue" />
+
+
+            <Button Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="5"
+                    x:Name="btnAceptar"
+                    Text="Aceptar"
+                    TextColor="White"
+                    BackgroundColor="#2c3e50"
+                    WidthRequest="150"
+                    HorizontalOptions="Center"
+                    CornerRadius="10"
+                    Clicked="btnAceptar_clicked"/>
+
+
+            <Button Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="5"
+                    x:Name="btnCancelar"
+                    Text="Cancelar"
+                    TextColor="White"
+                    BackgroundColor="#2c3e50"
+                    WidthRequest="150"
+                    HorizontalOptions="Center"
+                    CornerRadius="10"
+                    Clicked="btnCancelar_clicked" />
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
